@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "ruLoL Looter",
+	"description": "Автоматический собиратель наград со стримов по русскому лолу",
+	"version": "1.0.0",
+	"permissions": ["activeTab"],
+	"content_scripts": [
+		{
+			"matches": ["https://live.ru.lolesports.com/*", "https://live.ru.lolesports.com/"],
+			"js": ["jquery-3.3.1.js"],
+			"run_at": "document_end"
+		}, {
+			"matches": ["https://live.ru.lolesports.com/*", "https://live.ru.lolesports.com/"],
+			"js": ["looter.js"],
+			"run_at": "document_end"
+		}
+	]
+}
